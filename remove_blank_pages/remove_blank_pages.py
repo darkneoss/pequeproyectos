@@ -35,7 +35,7 @@ def process_pdfs_in_directory():
             remove_blank_pages(input_path, output_path)
             print(f"Processed {filename}")
 
-# Despliega mensaje
+# Despliega mensaje en pantalla
 process_pdfs_in_directory()
 
 input("Presiona Enter para cerrar...")
