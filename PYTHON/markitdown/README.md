@@ -18,17 +18,7 @@ Este script en Python permite convertir varios tipos de archivos (documentos, im
 
 ## Instalación
 
-1. Clona este repositorio en tu máquina local:
-   ```bash
-   git clone https://github.com/darkneoss/pequeproyectos.git
-   ```
-   
-2. Navega al directorio del proyecto:
-   ```bash
-   cd pequeproyectos
-   ```
-
-3. Instala las dependencias necesarias:
+1. Instala las dependencias necesarias:
    ```bash
    pip install markitdown
    ```
