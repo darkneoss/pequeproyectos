@@ -42,6 +42,20 @@ El script busca archivos de audio en el directorio actual con los siguientes for
 4. **Selecciona el idioma** del audio (1 para español, 2 para inglés).
 5. **Opcionalmente**, si seleccionaste inglés, se te preguntará si deseas traducir la transcripción al español.
 
+## Optimización para GPU
+
+Si tienes una tarjeta gráfica compatible, puedes mejorar el rendimiento de la transcripción cambiando el valor de `fp16` a `True` en la llamada a `model.transcribe()`. Esto permite usar precisión de punto flotante de 16 bits, lo que puede acelerar el proceso. Simplemente cambia:
+
+```python
+result = model.transcribe(audio_file_path, fp16=False, language=audio_language)
+```
+
+a:
+
+```python
+result = model.transcribe(audio_file_path, fp16=True, language=audio_language)
+```
+
 ## Salidas
 
 El script generará los siguientes archivos en el mismo directorio:
