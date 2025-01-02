@@ -11,6 +11,7 @@ def extract_data_from_xml(xml_file):
 
     # Datos básicos de la factura
     fecha = root.attrib.get('Fecha')
+    fecha_corta = fecha.split('T')[0] if fecha else 'No encontrado'
     total = root.attrib.get('Total')
 
     # Intentamos encontrar el elemento Emisor y Receptor
@@ -26,7 +27,7 @@ def extract_data_from_xml(xml_file):
     rfc_receptor = receptor.attrib.get('Rfc') if receptor is not None else 'No encontrado'
     nombre_receptor = receptor.attrib.get('Nombre') if receptor is not None else 'No encontrado'
 
-    return [fecha, uso_cfdi, rfc_emisor, nombre_emisor, rfc_receptor, nombre_receptor, descripcion, total]
+    return [fecha, fecha_corta, uso_cfdi, rfc_emisor, nombre_emisor, rfc_receptor, nombre_receptor, descripcion, total]
 
 def process_xml_folder():
     # Obtener el directorio donde está el script
@@ -55,7 +56,7 @@ def process_xml_folder():
     return data
 
 def save_to_csv(data, output_file):
-    header = ['Archivo', 'Fecha', 'UsoCFDI', 'RFC Emisor', 'Nombre Emisor', 'RFC Receptor', 'Nombre Receptor', 'Descripcion', 'Total']
+    header = ['Archivo', 'Fecha', 'Fecha Corta', 'UsoCFDI', 'RFC Emisor', 'Nombre Emisor', 'RFC Receptor', 'Nombre Receptor', 'Descripcion', 'Total']
     
     with open(output_file, 'w', newline='', encoding='utf-8') as csv_file:
         writer = csv.writer(csv_file)
