@@ -43,7 +43,7 @@ Supongamos que tienes un bloque llamado `AntiguoBloque` y deseas reemplazarlo po
 
 - Asegúrate de que el nuevo bloque esté definido en el dibujo antes de ejecutar el script.
 - Este script utiliza el comando `UNDO` para permitir deshacer los cambios realizados.
-- No esta soportado el uso de bloques con atribtutos .
+- No esta soportado el uso de bloques con atributos .
 
 ## Contribuciones
 
