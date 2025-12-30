@@ -1,4 +1,4 @@
-# Etiquetado Automático de Tramos para Planos de Alumbrado
+# Etiquetado Automático de Tramos
 
 Este script de AutoLISP permite etiquetar automáticamente longitudes de tramos y generar una tabla resumen.
 
